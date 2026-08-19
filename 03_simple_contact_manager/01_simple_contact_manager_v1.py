@@ -63,3 +63,22 @@ while cek == False:
                 print(f"Contact dengan index -{index_pilihan} berhasil dihapus!")
             else:
                 print(f"Data dengan index -{index_pilihan} tidak ditemukan")
+
+        elif pilihan == 2:
+            cek_nama_pilihan = False
+            nama_pilihan = input("Masukan nama yang ingin dihapus = ")
+            for kon in all_contact:
+                if nama_pilihan == kon['Nama'] :
+                    all_contact.remove(kon)
+                    cek_nama_pilihan = True
+
+            if cek_nama_pilihan :
+                print("Nama pilihan berhasil dihapus")
+            else :
+                print("Kontak tidak ditemukan")
+
+    elif input_user == 5:
+        input_pengguna = input("Do you wanna quit? IF YES INPUT 'Y'")
+        if input_pengguna == "Y":
+            print("Berhasil keluar")
+            break
